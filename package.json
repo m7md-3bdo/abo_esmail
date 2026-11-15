@@ -1,1 +1,18 @@
-{"name":"aboesmail-coaching","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --host 0.0.0.0","build":"vite build"},"dependencies":{"react":"^19.0.0","react-dom":"^19.0.0","react-router-dom":"^7.0.0","three":"^0.180.0","vite":"^6.1.0"}}
+{
+  "name": "abo_esmail",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build && node scripts/pages-routes.mjs",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.0.0",
+    "three": "^0.180.0",
+    "vite": "^6.1.0"
+  }
+}

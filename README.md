@@ -1,34 +1,20 @@
 # AboEsmail Coaching
 
-Custom bilingual React/Vite marketing website for Ahmed Esmail. Includes React Router package pages, Arabic RTL / English LTR, full-payment and installment prices, WhatsApp booking links, and a procedural Three.js dumbbell.
-
-## Run
+Bilingual Arabic/English React + Vite site configured for the `m7md-3bdo/abo_esmail` GitHub Pages project.
 
 ```sh
 npm install
 npm run dev
 ```
 
-## Production
+Build: `npm run build`. Preview: `npm run preview`.
 
-```sh
-npm run build
-```
+Set repository Settings → Pages → Source to GitHub Actions. The included `.github/workflows/deploy.yml` publishes pushes to `main`.
 
-Deploy `dist/` to a static host with SPA fallback: all application paths should serve `index.html` when no asset matches. No backend or secret keys are required. Domain purchase is optional and separate from hosting. Google Fonts are requested externally; system fallbacks are provided.
+See `START_HERE_AR.md` for Arabic upload instructions. Upload the contents of this project to the repository root, including `.github`. Do not upload node_modules or dist.
 
-## Content
+`vite.config.js` sets `/abo_esmail/`; React Router and image URLs use the Vite base. Post-build entry pages support direct links and refreshes for each package. The source remains client-side routed without full page reloads on internal navigation.
 
-Edit package data and Arabic/English content in `src/main.jsx`, styling in `src/style.css`, and the 3D object in `src/Dumbbell.jsx`. Photos/logo live in `public/assets/`. The WhatsApp number is the `phone` constant. No messages are sent automatically; links open a pre-filled draft.
+Source: src/main.jsx, src/style.css, src/Dumbbell.jsx. Assets: public/assets.
 
-Standard is labeled “Recommended”, not an unverified bestseller claim. No invented testimonials, credentials or guaranteed results are included.
-
-## Validation
-
-Production build; desktop Arabic and English pages; mobile-width homepage/menu/package navigation; tablet package layout; pricing toggle; Standard installment booking URL; reduced-motion styling and 3D animation preference handling.
-
-## Social sharing and future repository
-
-Planned GitHub repository name: `abo_esmail` (not created by this project).
-Open Graph and Twitter card tags are included in the initial HTML, using the supplied branded coaching poster. Social apps control whether and how cards appear; story links are not guaranteed to produce cards. The current owner-private site cannot be crawled by social platforms. Public publication and publicly fetchable images are prerequisites for previews. After choosing a new public origin, replace the canonical, og:url, og:image, og:image:secure_url and twitter:image absolute URLs in index.html. Do not leave preview URLs there on a GitHub deployment.
-GitHub Pages project deployment also requires a Vite base path and router/asset configuration for `/abo_esmail/`; current deployment targets the root of the existing Sites host.
+The 3D object requires WebGL; an interactive SVG/CSS fallback is included. Social preview display is controlled by each platform and needs the deployed public URL. No deployment has been performed by downloading this ZIP.
